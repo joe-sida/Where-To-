@@ -28,7 +28,7 @@
     </style>
 </head>
 <body>
-    <img src="path/to/your/screenshot.png" alt="Website Screenshot" class="screenshot">
+    <img src="Capture.png" alt="Website Screenshot" class="screenshot">
     <div class="description">
         <p>"Where to?" is a simple basic website about travel destinations in Ethiopia. Made with Basic HTML and Some CSS animations.</p>
     </div>
