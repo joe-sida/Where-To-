@@ -49,8 +49,13 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
     setDiameter();
+    
+    let resizeTimer;
     window.addEventListener('resize', () => {
-        setDiameter();
+        clearTimeout(resizeTimer);
+        resizeTimer = setTimeout(() => {
+            setDiameter();
+        }, 100);
     });
 
     // Add keyboard event listener

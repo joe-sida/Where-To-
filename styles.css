@@ -47,7 +47,7 @@ header{
     display: flex;
     justify-content: center;
     align-items: center;
-    transition: 1s;
+    transition: 0.4s;
 }
 .slider .list .item .content{
     position: absolute;
@@ -71,7 +71,7 @@ header{
     font-family: 'Bebas Neue';
     line-height: 0.7em;
     transform: translateY(-100%);
-    transition: transform 1s;
+    transition: transform 0.4s;
     grid-row-start: 1;
     grid-row-end: 4;
 }
@@ -144,7 +144,8 @@ header{
     border-radius: 50%;
     transform: rotate(-60deg);
     position: relative;
-    transition: 1s;
+    transition: 0.4s;
+    will-change: transform;
 }
 .slider .list .item .image::before, 
 .slider .list .item .image::after{
@@ -161,7 +162,7 @@ header{
     var(--url);
     background-size: var(--diameter) var(--diameter);
     background-position: center;
-    transition: 1s;
+    transition: 0.4s;
     background-size: cover;
 }
 .slider .list .item .image::after{
@@ -189,6 +190,7 @@ header{
 .slider .item.active .image{
     filter: blur(0px);
     transform: rotate(0deg);
+    will-change: transform;
 }
 .slider .item.active .image::before,
 .slider .item.active .image::after
