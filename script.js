@@ -69,3 +69,8 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     });
 });
+
+// Hamburger menu toggle
+function toggleMenu() {
+    document.getElementById('menuOverlay').classList.toggle('open');
+}

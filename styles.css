@@ -109,7 +109,6 @@ header{
 
     
 
-
 .slider .list .item .content p{
     font-family: Georgia, 'Times New Roman', Times, serif;
     line-height: 1.6;
@@ -263,6 +262,101 @@ header{
     opacity: 0;
     pointer-events: none;
 }
+
+/* ─── Hamburger Menu ─────────────────────────────────────────── */
+.hamburger {
+    cursor: pointer;
+    transition: opacity 0.2s;
+}
+.hamburger:hover {
+    opacity: 0.7;
+}
+
+.menu-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 100;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s;
+}
+.menu-overlay.open {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.menu-panel {
+    position: fixed;
+    top: 0;
+    right: -320px;
+    width: 300px;
+    height: 100vh;
+    background: #1a2a2a;
+    padding: 80px 30px 30px;
+    transition: right 0.3s ease;
+    overflow-y: auto;
+    box-shadow: -5px 0 20px rgba(0, 0, 0, 0.5);
+}
+.menu-overlay.open .menu-panel {
+    right: 0;
+}
+
+.menu-close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+    transition: opacity 0.2s;
+}
+.menu-close:hover {
+    opacity: 0.7;
+}
+
+.menu-panel h2 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 2em;
+    color: #fff;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+}
+
+.menu-panel ul {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.menu-panel ul li a {
+    color: #ddd;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.95em;
+    padding: 8px 12px;
+    display: block;
+    border-radius: 6px;
+    transition: background 0.2s, color 0.2s;
+}
+.menu-panel ul li a:hover {
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+}
+
+.menu-home {
+    display: block;
+    margin-top: 24px;
+    padding: 10px 12px;
+    color: #ff6b6b;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1em;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    transition: opacity 0.2s;
+}
+.menu-home:hover {
+    opacity: 0.8;
+}
+
 @media all and (max-width: 1024px) {
     .slider .list .item .content{
         grid-template-columns: repeat(2, 300px);
@@ -283,5 +377,9 @@ header{
     }
     .slider .list .item .content p{
         font-size: small;
+    }
+    .menu-panel {
+        width: 260px;
+        right: -280px;
     }
 }

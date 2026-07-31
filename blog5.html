@@ -7,18 +7,39 @@
     <link href="https://fonts.cdnfonts.com/css/bebas-neue" rel="stylesheet">
     <link href="https://fonts.cdnfonts.com/css/poppins" rel="stylesheet">
     <link rel="stylesheet" href="blog.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
+        <header>
         <figure class="logo">
             <img src="img/logobg.png" alt="">
         </figure>
         <nav>
-            <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+            <svg class="hamburger" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24" onclick="toggleMenu()">
                 <path stroke="currentColor" stroke-linecap="round" stroke-width="2" d="M5 7h14M5 12h14M5 17h10"/>
             </svg>
         </nav>
     </header>
+    <div class="menu-overlay" id="menuOverlay" onclick="toggleMenu()">
+        <div class="menu-panel" onclick="event.stopPropagation()">
+            <svg class="menu-close" xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="none" viewBox="0 0 24 24" onclick="toggleMenu()">
+                <path stroke="currentColor" stroke-linecap="round" stroke-width="2" d="M6 18 18 6M6 6l12 12"/>
+            </svg>
+            <h2>Destinations</h2>
+            <ul>
+                <li><a href="blog1.html" onclick="toggleMenu()">🌋 Erta Ale</a></li>
+                <li><a href="blog2.html" onclick="toggleMenu()">🏜️ Danakil Depression</a></li>
+                <li><a href="blog3.html" onclick="toggleMenu()">🌡️ Dallol</a></li>
+                <li><a href="blog4.html" onclick="toggleMenu()">⛪ Lalibela</a></li>
+                <li><a href="blog5.html" onclick="toggleMenu()">⛰️ Simien Mountains</a></li>
+                <li><a href="blog6.html" onclick="toggleMenu()">🌲 Bale Mountains</a></li>
+                <li><a href="blog7.html" onclick="toggleMenu()">🏘️ East Hararghe</a></li>
+                <li><a href="blog8.html" onclick="toggleMenu()">🐒 Gelada</a></li>
+                <li><a href="blog9.html" onclick="toggleMenu()">🏞️ Wenchi Crater Lake</a></li>
+            </ul>
+            <a href="index.html" class="menu-home" onclick="toggleMenu()">🏠 Home</a>
+        </div>
+    </div>
   
   <section class="slider">
     <div class="image" style="--url: url('img/img5.jpg')"></div>
@@ -51,5 +72,6 @@
             
         </div>
     </div>
+    <script src="script.js"></script>
 </body>
 </html>

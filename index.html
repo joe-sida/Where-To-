@@ -17,11 +17,31 @@
                 <img src="img/logobg.png" alt="">
             </figure>
             <nav>
-                <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                <svg class="hamburger" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24" onclick="toggleMenu()">
                     <path stroke="currentColor" stroke-linecap="round" stroke-width="2" d="M5 7h14M5 12h14M5 17h10"/>
                 </svg>
             </nav>
         </header>
+        <div class="menu-overlay" id="menuOverlay" onclick="toggleMenu()">
+            <div class="menu-panel" onclick="event.stopPropagation()">
+                <svg class="menu-close" xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="none" viewBox="0 0 24 24" onclick="toggleMenu()">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-width="2" d="M6 18 18 6M6 6l12 12"/>
+                </svg>
+                <h2>Destinations</h2>
+                <ul>
+                    <li><a href="blog1.html" onclick="toggleMenu()">🌋 Erta Ale</a></li>
+                    <li><a href="blog2.html" onclick="toggleMenu()">🏜️ Danakil Depression</a></li>
+                    <li><a href="blog3.html" onclick="toggleMenu()">🌡️ Dallol</a></li>
+                    <li><a href="blog4.html" onclick="toggleMenu()">⛪ Lalibela</a></li>
+                    <li><a href="blog5.html" onclick="toggleMenu()">⛰️ Simien Mountains</a></li>
+                    <li><a href="blog6.html" onclick="toggleMenu()">🌲 Bale Mountains</a></li>
+                    <li><a href="blog7.html" onclick="toggleMenu()">🏘️ East Hararghe</a></li>
+                    <li><a href="blog8.html" onclick="toggleMenu()">🐒 Gelada</a></li>
+                    <li><a href="blog9.html" onclick="toggleMenu()">🏞️ Wenchi Crater Lake</a></li>
+                </ul>
+                <a href="index.html" class="menu-home" onclick="toggleMenu()">🏠 Home</a>
+            </div>
+        </div>
         <section class="slider">
             <div class="list">
                 <div class="item active">
@@ -78,7 +98,6 @@
                         <h2>Where Do You Want To <span class="Go">Go Next?</span></h2>
                         <p>
                             Simien Mountains National Park, Ethiopia's largest, is a sanctuary of stunning beauty and biodiversity. Nestled in the Amhara Region, it boasts Ras Dashan, Ethiopia's highest peak, and is home to unique wildlife like the Ethiopian wolf and walia ibex. This UNESCO World Heritage site captivates with dramatic cliffs, deep valleys, and diverse flora, including giant lobelias and endemic bird species. Established in 1969, the park faces conservation challenges but remains a vital refuge, offering a glimpse into Ethiopia's natural wonders and ongoing conservation efforts.
-
                         </p>
                         <button class="readmore">
                             <a href="blog5.html"><span>Click Here to Read More and Plan Your Trip</span></a>
@@ -148,7 +167,6 @@
             </div>
         </section>
     </main>
-
 
 
     <script src="script.js"></script>
